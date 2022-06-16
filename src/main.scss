@@ -1,25 +1,6 @@
 @import 'button';
-
-$primary-color: #ffe92e;
-$secundary-color: black;
-$terciary-color: white;
-$font-color: #aaa;
-
-$box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
-
-$limit: 10;
-$unit: 8px;
-
-
-@function size($value) {
-    @return $value * $unit;
-}
-
-@mixin reset-pm {
-    padding: 0;
-    margin: 0;
-}
-
+@import 'config';
+@import 'utils';
 
 
 
@@ -101,50 +82,3 @@ header {
     }
 }
 
-.row {
-
-    display: flex;
-    align-items: center;
-
-    .col {
-        width: 50%;
-    }
-
-    .col-30 {
-        width: 30%;
-    }
-
-    .col-70 {
-        width: 70%;
-    }
-}
-
-.m-auto {
-    margin: 0 auto;
-}
-
-@for $i from 1 to $limit {
-    .m-#{$i} {
-        margin: $i * $unit;
-    }
-}
-
-@for $i from 1 to $limit {
-
-    .p-#{$i} {
-        padding: $i * $unit;
-    }
-}
-
-@for $i from 1 to $limit {
-
-    .py-#{$i} {
-        padding: $i * $unit 0;
-    }
-}
-
-@for $i from 1 to 4 {
-    .w-#{$i}{
-        width: $i * 25%;
-    }
-}
