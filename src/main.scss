@@ -1,3 +1,5 @@
+@import 'button';
+
 $primary-color: #ffe92e;
 $secundary-color: black;
 $terciary-color: white;
@@ -18,36 +20,7 @@ $unit: 8px;
     margin: 0;
 }
 
-@mixin btn($background-color, $color, $bold) {
-    background-color: $background-color;
-    color: $color;
-    border-radius: 50px;
-    padding: 20px 30px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 
-    @if($bold =='true') {
-        font-weight: bolder;
-    }
-}
-
-.btn {
-    &.btn-cta {
-        @include btn($primary-color, $secundary-color, 'true');
-
-        &:hover {
-            @include btn($secundary-color, $terciary-color, 'true');
-            box-shadow: $box-shadow;
-        }
-    }
-
-    &:hover {
-        @include btn($terciary-color, $secundary-color, 'true');
-        box-shadow: $box-shadow;
-    }
-}
 
 
 * {
@@ -111,6 +84,20 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+}
+
+.prices {
+    .prev{
+        font-size: size(2);
+        font-weight: bolder;
+        color: $font-color;
+        text-decoration: line-through;
+
+    }
+    .now{
+        font-size: size(5);
+        font-weight:bolder;
     }
 }
 
